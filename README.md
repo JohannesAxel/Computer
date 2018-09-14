@@ -20,6 +20,7 @@ Wordfactory & Program.
 
 6. Studera designmönstret Strategy och exemplen från föreläsningarna. Hur använder man mönstret för att hantera olika sorters operander på ett enhetligt sätt?
 
+Alla har egna operander. Metoder ligger inte i själva objektet, utan i interfacet.
 
 7. När man exekverar Add-instruktionen skall man utföra en addition av två tal. I vilken klass skall additionen utföras?
 
