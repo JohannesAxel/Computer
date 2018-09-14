@@ -24,6 +24,8 @@ Alla har egna operander. Metoder ligger inte i själva objektet, utan i interfac
 
 7. När man exekverar Add-instruktionen skall man utföra en addition av två tal. I vilken klass skall additionen utföras?
 
+Kommer utföras i klassen Add, om vi inte använder strategy - då körs det i program. 
+Alla program behöver dock inte Add, så därför är en klass Add det bästa alternativet. 
 
 8. Rita ett sekvensdiagram på papper som visar alla inblandade objekt när Add-kommandot i Factorial exekveras.
 
