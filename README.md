@@ -2,10 +2,7 @@
 1. Det finns ett antal klasser och gränssnitt i programkoden ovan och det behövs ytterligare några för att kunna implementera programmet. Vilka klasser saknas och vilka är gränssnitt respektive klasser?
 
 Saknas: 
-  - WordFactory : Interface
-  - ProgCommand : Interface
-  - ProgMacro : Class
-  - BinOp : Abstract Class
+  - 
  
 
 2. Klassen Program har till synes metoden add för att lägga till en instruktion till programmet. Vilken standardklass skulle man kunna utvidga för att slippa implementera metoden själv? Är det lämpligt att göra så?
@@ -16,23 +13,11 @@ Man skulle kunna använda en lista med ProgCommands som sedan körs. Detta istä
 
 Computer package: 
 
-  - Memory
-  - Address
-  - Computer
+ - 
  
 Program package:
  
-  - Program
-  - Operation
-  - Print
-  - JumpOp
-  - Jump
-  - JumpEq
-  - Halt
-  - BinOp
-  - Copy
-  - Mul
-  - Add 
+  - 
 
 4. Studera designmönstret Command. Var och hur bör det användas i uppgiften.
 
