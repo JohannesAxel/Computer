@@ -6,7 +6,7 @@
  - ByteWord : Klass
  - LongWord : Klass
  - Instructions : Interface
- - MemoryOp : Abstrakt klass
+ - AdressOp : Abstrakt klass
  - ProgramCounter : Klass
 
 2. Klassen Program har till synes metoden add för att lägga till en instruktion till programmet. Vilken standardklass skulle man kunna utvidga för att slippa implementera metoden själv? Är det lämpligt att göra så?
@@ -29,7 +29,15 @@ Computer package:
  
 Program package:
  
-  - 
+  - Program
+  - ProgramCounter
+  - Instructions
+  - AddressOp
+  - Add
+  - Mul
+  - Copy
+  - Jump
+  - JumpEq
 
 4. Studera designmönstret Command. Var och hur bör det användas i uppgiften.
 
