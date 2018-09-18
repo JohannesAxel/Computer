@@ -51,6 +51,10 @@ Alla program behöver dock inte Add, så därför är en klass Add det bästa al
 
 Se [`Sekvensdiagram.jpg`](Sekvensdiagram.jpg):
 
+<center>
+    <img src="Sekvensdiagram.jpg" width="100%">
+</center>
+
 9. Vad bör hända om någon gör anropet (observera att vi använder olika slags factories när vi skapar programmet och när vi skapar minnet):
 
 Programmet kraschar och skrivet ut en 0:a, då vi måste ha samma typ av WordFactory i minnet som i programmet. 
