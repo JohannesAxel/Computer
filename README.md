@@ -49,6 +49,7 @@ Alla program behöver dock inte Add, så därför är en klass Add det bästa al
 
 8. Rita ett sekvensdiagram på papper som visar alla inblandade objekt när Add-kommandot i Factorial exekveras.
 
+Se [`Sekvensdiagram.jpg`](Sekvensdiagram.jpg):
 
 9. Vad bör hända om någon gör anropet (observera att vi använder olika slags factories när vi skapar programmet och när vi skapar minnet):
 
