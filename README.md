@@ -10,7 +10,7 @@ Saknas:
 
 2. Klassen Program har till synes metoden add för att lägga till en instruktion till programmet. Vilken standardklass skulle man kunna utvidga för att slippa implementera metoden själv? Är det lämpligt att göra så?
 
-Man skulle kunna använda en lista. Det krånglar till koden, vet inte riktigt var den skulle ligga isåfall. Kommer behöva skapa ny lista varje gång. 
+Man skulle kunna använda en lista med ProgCommands som sedan körs. Detta istället för att ha en ProgMacro-klass som ger oss add-funktionen.
 
 3. Klasserna skall fördelas på minst två paket. Vilka paket bör finnas och hur fördelas klasserna? (Under föreläsning 6 kommer vi att prata mer om paketindelning, men fundera gärna redan nu igenom vilka klasser som 'hör ihop' i detta projekt).
 
@@ -40,7 +40,7 @@ Används när vi ska bygga upp Program, skapas i interfacet ProgCommand. Laddar 
 
 5. Studera designmönstret Template method. Mönstret skall användas för att undvika duplicerad kod i likartade klasser. Var kan detta bli aktuellt?
 
-WordFactory, BinOp, JumpOp. Alla operander. 
+WordFactory, BinOp, JumpOp. 
 
 6. Studera designmönstret Strategy och exemplen från föreläsningarna. Hur använder man mönstret för att hantera olika sorters operander på ett enhetligt sätt?
 
@@ -56,3 +56,5 @@ Alla program behöver dock inte Add, så därför är en klass Add det bästa al
 
 
 9. Vad bör hända om någon gör anropet (observera att vi använder olika slags factories när vi skapar programmet och när vi skapar minnet):
+
+Programmet kraschar och skrivet ut en 0:a, då vi måste ha samma typ av WordFactory i minnet som i programmet. 
