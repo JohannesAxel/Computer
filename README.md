@@ -1,7 +1,8 @@
 # inlamning1computer
 1. Det finns ett antal klasser och gränssnitt i programkoden ovan och det behövs ytterligare några för att kunna implementera programmet. Vilka klasser saknas och vilka är gränssnitt respektive klasser?
 
-Saknas: 
+
+Saknas
   - 
  
 
