@@ -5,11 +5,13 @@
  - WordType : Interface
  - ByteWord : Klass
  - LongWord : Klass
- - 
+ - Instructions : Interface
+ - MemoryOp : Abstrakt klass
+ - ProgramCounter : Klass
 
 2. Klassen Program har till synes metoden add för att lägga till en instruktion till programmet. Vilken standardklass skulle man kunna utvidga för att slippa implementera metoden själv? Är det lämpligt att göra så?
 
-Man skulle kunna använda en lista med ProgCommands som sedan körs. Detta istället för att ha en ProgMacro-klass som ger oss add-funktionen.
+Man skulle kunna använda listans egna add, men då kan vi inte definera den som vi vill ha den. 
 
 3. Klasserna skall fördelas på minst två paket. Vilka paket bör finnas och hur fördelas klasserna? (Under föreläsning 6 kommer vi att prata mer om paketindelning, men fundera gärna redan nu igenom vilka klasser som 'hör ihop' i detta projekt).
 
@@ -31,11 +33,11 @@ Program package:
 
 4. Studera designmönstret Command. Var och hur bör det användas i uppgiften.
 
-Används när vi ska bygga upp Program, skapas i interfacet ProgCommand. Laddar flera program samtidigt i en stack och kör sedan detta.
+Används när vi ska bygga upp Program, skapas i interfacet Instructions. Laddar flera program samtidigt i en stack och kör sedan detta.
 
 5. Studera designmönstret Template method. Mönstret skall användas för att undvika duplicerad kod i likartade klasser. Var kan detta bli aktuellt?
 
-WordFactory, WordType, BinOp, JumpOp. 
+WordFactory, WordType, MemoryOp.
 
 6. Studera designmönstret Strategy och exemplen från föreläsningarna. Hur använder man mönstret för att hantera olika sorters operander på ett enhetligt sätt?
 
