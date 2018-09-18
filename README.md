@@ -1,7 +1,11 @@
 # inlamning1computer
 1. Det finns ett antal klasser och gränssnitt i programkoden ovan och det behövs ytterligare några för att kunna implementera programmet. Vilka klasser saknas och vilka är gränssnitt respektive klasser?
 
- 
+ Klasser som ska läggas till 
+ - WordType : Interface
+ - ByteWord : Klass
+ - LongWord : Klass
+ - 
 
 2. Klassen Program har till synes metoden add för att lägga till en instruktion till programmet. Vilken standardklass skulle man kunna utvidga för att slippa implementera metoden själv? Är det lämpligt att göra så?
 
@@ -11,7 +15,15 @@ Man skulle kunna använda en lista med ProgCommands som sedan körs. Detta istä
 
 Computer package: 
 
- - 
+ - Computer
+ - Memory
+ - Address
+ - WordFactory
+ - ByteWordFactory
+ - LongWordFactory
+ - WordType
+ - ByteWord
+ - LongWord
  
 Program package:
  
@@ -23,7 +35,7 @@ Används när vi ska bygga upp Program, skapas i interfacet ProgCommand. Laddar 
 
 5. Studera designmönstret Template method. Mönstret skall användas för att undvika duplicerad kod i likartade klasser. Var kan detta bli aktuellt?
 
-WordFactory, BinOp, JumpOp. 
+WordFactory, WordType, BinOp, JumpOp. 
 
 6. Studera designmönstret Strategy och exemplen från föreläsningarna. Hur använder man mönstret för att hantera olika sorters operander på ett enhetligt sätt?
 
