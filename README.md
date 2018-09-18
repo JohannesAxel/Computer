@@ -2,12 +2,11 @@
 1. Det finns ett antal klasser och gränssnitt i programkoden ovan och det behövs ytterligare några för att kunna implementera programmet. Vilka klasser saknas och vilka är gränssnitt respektive klasser?
 
 Saknas: 
-
-WordFactory : Interface
-ProgCommand : Interface
-ProgMacro : Class
-BinOp : Abstract Class
-
+  - WordFactory : Interface
+  - ProgCommand : Interface
+  - ProgMacro : Class
+  - BinOp : Abstract Class
+ 
 
 2. Klassen Program har till synes metoden add för att lägga till en instruktion till programmet. Vilken standardklass skulle man kunna utvidga för att slippa implementera metoden själv? Är det lämpligt att göra så?
 
@@ -21,7 +20,6 @@ Computer package:
   - Address
   - Computer
  
-
 Program package:
  
   - Program
