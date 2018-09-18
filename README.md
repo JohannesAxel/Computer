@@ -6,7 +6,8 @@
  - ByteWord : Klass
  - LongWord : Klass
  - Instructions : Interface
- - AdressOp : Abstrakt klass
+ - AdressOp : Abstrakt Klass
+ - IndexOp : Abstrakt Klass
  - ProgramCounter : Klass
 
 2. Klassen Program har till synes metoden add för att lägga till en instruktion till programmet. Vilken standardklass skulle man kunna utvidga för att slippa implementera metoden själv? Är det lämpligt att göra så?
@@ -36,8 +37,10 @@ Program package:
   - Add
   - Mul
   - Copy
+  - IndexOp
   - Jump
   - JumpEq
+  - Halt
 
 4. Studera designmönstret Command. Var och hur bör det användas i uppgiften.
 
@@ -45,7 +48,7 @@ Används när vi ska bygga upp Program, skapas i interfacet Instructions. Laddar
 
 5. Studera designmönstret Template method. Mönstret skall användas för att undvika duplicerad kod i likartade klasser. Var kan detta bli aktuellt?
 
-WordFactory, WordType, MemoryOp.
+WordFactory, WordType, AddressOp, IndexOp
 
 6. Studera designmönstret Strategy och exemplen från föreläsningarna. Hur använder man mönstret för att hantera olika sorters operander på ett enhetligt sätt?
 
@@ -61,9 +64,6 @@ Alla program behöver dock inte Add, så därför är en klass Add det bästa al
 
 Se [`Sekvensdiagram.jpg`](Sekvensdiagram.jpg):
 
-<center>
-    <img src="Sekvensdiagram.jpg" width="100%">
-</center>
 
 9. Vad bör hända om någon gör anropet (observera att vi använder olika slags factories när vi skapar programmet och när vi skapar minnet):
 
