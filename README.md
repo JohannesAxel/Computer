@@ -44,8 +44,8 @@ Program package:
 
 4. Studera designmönstret Command. Var och hur bör det användas i uppgiften.
 
-Det kan användas när vi bygger upp program för att skapa en execute som används när computer kör run(); på det laddade programet. Det har ej implementerats i vårt program
-då vi kör en execute den abstracta klassen program direkt pga att vi använder lista och inte skapar en macroklass för att göra en metodstack.
+Det skulle kunna användas när vi bygger upp program, för att skapa en execute som används när computer kör run(); på det laddade programet. 
+Det har ej implementerats i vårt program då vi kör en execute i den abstracta klassen program direkt pga att vi använder en lista och inte skapar en macroklass för att göra en metodstack.
 
 
 5. Studera designmönstret Template method. Mönstret skall användas för att undvika duplicerad kod i likartade klasser. Var kan detta bli aktuellt?
@@ -54,7 +54,7 @@ WordFactory, WordType, AddressOp, IndexOp.
 
 6. Studera designmönstret Strategy och exemplen från föreläsningarna. Hur använder man mönstret för att hantera olika sorters operander på ett enhetligt sätt?
 
-Man inte upp i olika typer av klasser, utan har en klass med olika operandattribut. Det behövs fortfarande ett interface för operandtypen. 
+Man vill inte dela upp i massa subklasser, utan vill ha en klass med olika operandattribut. Det behövs fortfarande ett interface för operandtypen. 
 Om man vill kunna ändra en operand efter objektet har deklarerats är det viktigt att implementera Strategy. 
 
 7. När man exekverar Add-instruktionen skall man utföra en addition av två tal. I vilken klass skall additionen utföras?
