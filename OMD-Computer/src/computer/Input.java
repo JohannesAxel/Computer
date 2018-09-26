@@ -1,5 +1,5 @@
 package computer;
 
-public interface Input {
+public abstract interface Input {
 
 }

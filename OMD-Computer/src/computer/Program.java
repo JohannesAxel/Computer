@@ -15,4 +15,10 @@ public abstract class Program {
 	protected void add(Instruction instruction) {
 		
 	}
+
+	public void execute(Memory memory) {
+		while (progCount.get() != -1) {
+			instructions.get(progCount.get()).execute();			
+		}
+	}
 }

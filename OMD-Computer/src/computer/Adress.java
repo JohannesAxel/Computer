@@ -1,6 +1,6 @@
 package computer;
 
-public class Adress {
+public class Adress implements Input{
 	private int index;
 	
 	public Adress(int index) {
@@ -9,4 +9,5 @@ public class Adress {
 	protected int get() {
 		return index;
 	}
+
 }
