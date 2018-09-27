@@ -9,5 +9,8 @@ public class Adress implements Input{
 	protected int get() {
 		return index;
 	}
-
+	
+	public boolean adress(){
+		return true;
+	}
 }

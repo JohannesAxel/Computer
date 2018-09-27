@@ -13,4 +13,7 @@ public class Memory {
 		return memory[adress.get()];
 	}
 	
+	protected void set(Word word, Adress adress){
+		memory[adress.get()] = word;
+	}
 }
