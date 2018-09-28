@@ -6,10 +6,9 @@ public class ByteWord implements Word<ByteWord> {
 
 	public ByteWord(byte byteWord) {
 		this.byteWord = byteWord;
-
 	}
 
-	public Byte get() {
+	public byte getValue() {
 		return byteWord;
 
 	}
@@ -18,8 +17,20 @@ public class ByteWord implements Word<ByteWord> {
 		return byteWord;
 	}
 
-	@Override
 	public ByteWord mul(ByteWord word) {
 		return null;
 	}
+
+	@Override
+	public Word get(Memory memory) {
+		return this;
+	}
+
+	@Override
+	public ByteWord set(ByteWord byteWord) {
+		this.byteWord = byteWord.getValue();
+		return null;
+	}
+
+	
 }

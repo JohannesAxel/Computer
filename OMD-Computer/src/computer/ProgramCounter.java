@@ -7,7 +7,9 @@ public class ProgramCounter {
 		index = 0;
 	}
 	protected void next() {
-		index++;
+		if (index != -1){
+			index++;
+		}
 	}
 	protected void jump(int index) {
 		this.index = index;

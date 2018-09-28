@@ -6,8 +6,8 @@ public class Adress implements Input{
 	public Adress(int index) {
 		this.index = index;
 	}
-	protected int get() {
-		return index;
+	public Word get(Memory memory) {
+		return memory.get(index);
 	}
 	
 	public boolean adress(){

@@ -6,19 +6,21 @@ import java.util.List;
 public abstract class Program {
 	
 	List<Instruction> instructions; 
-	ProgramCounter progCount;
+	ProgramCounter progCounter;
+	
 	public Program() {
-		progCount = new ProgramCounter();
+		progCounter = new ProgramCounter();
 		instructions = new ArrayList<Instruction>();
 	}
 
 	protected void add(Instruction instruction) {
-		
+		instructions.add(instruction);
 	}
 
 	public void execute(Memory memory) {
-		while (progCount.get() != -1) {
-			instructions.get(progCount.get()).execute();			
+		while (progCounter.get() != -1) {
+			instructions.get(progCounter.get()).execute(memory, progCounter);
+			progCounter.next();
 		}
 	}
 }

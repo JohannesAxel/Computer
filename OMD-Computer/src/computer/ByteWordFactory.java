@@ -1,14 +1,12 @@
 package computer;
 
-public class ByteWordFactory {
+public class ByteWordFactory implements WordFactory<ByteWord>{
 	
 	public ByteWordFactory(){
 		
 	}
-	public ByteWord Word(String string){
-		
-		
-		
-		return new ByteWord(byteWord);
+
+	public ByteWord word(ByteWord word) {
+		return null;
 	}
 }

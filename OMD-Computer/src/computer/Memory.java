@@ -9,11 +9,8 @@ public class Memory {
 		memory = new Word[size];
 	}
 	
-	protected Word get(Adress adress) {
-		return memory[adress.get()];
+	protected Word get(int index) {
+		return memory[index];
 	}
 	
-	protected void set(Word word, Adress adress){
-		memory[adress.get()] = word;
-	}
 }
