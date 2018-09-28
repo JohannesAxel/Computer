@@ -1,27 +1,33 @@
 package computer;
 
-public class Add extends Word{
-		Input left;
-		Input right;
+public class Add{
+		Input leftInput;
+		Input rightInput;
 		Adress adress;
 	
 	
 	public Add(Input left, Input right, Adress adress){
 		
-		this.left = left;
-		this.right = right;
+		this.leftInput = left;
+		this.rightInput = right;
 		this.adress = adress;
 		
 	}
 	
 	public void execute(Memory memory){
-			if (left.adress()){
-				 left = memory.get((Adress)left);
+			Word left;
+			Word right;
+			if (leftInput.adress()){
+				 left = memory.get((Adress)leftInput);
+			} else {
+				left = (Word) leftInput;
 			}
-			if(right.adress()){
-				right = memory.get((Adress)right);
+			if(rightInput.adress()){
+				right = memory.get((Adress)rightInput);
+			} else {
+				right = (Word) rightInput;
 			}
 			
-			memory.set((Word)left.add((Word)right), adress);
+			memory.set(left.add(right), adress);
 	}
 }
