@@ -2,23 +2,25 @@ package computer;
 
 public class ByteWord implements Word<ByteWord> {
 	
-	byte byteWord;
+	Byte byteWord;
 
 	public ByteWord(byte byteWord) {
 		this.byteWord = byteWord;
 	}
 
-	public byte getValue() {
+	public Byte getValue() {
 		return byteWord;
 
 	}
 
 	public ByteWord add(ByteWord byteWord) {
-		return byteWord;
+		
+		return new ByteWord( (byte) (byteWord.getValue() + this.byteWord) );
 	}
 
-	public ByteWord mul(ByteWord word) {
-		return null;
+	public ByteWord mul(ByteWord byteWord) {
+		
+		return new ByteWord( (byte) (byteWord.getValue() * this.byteWord) );
 	}
 
 	public Word get(Memory memory) {
@@ -29,11 +31,11 @@ public class ByteWord implements Word<ByteWord> {
 		this.byteWord = byteWord.getValue();
 	}
 
-	public boolean equals(ByteWord byteWord) {
-		return false;
+	public int compareTo(ByteWord byteWord) {
+		return this.byteWord.compareTo(byteWord.getValue());
 	}
 	public String toString(){
-		return String.valueOf(byteWord);
+		return Byte.toString(byteWord);
 	}
 	
 }
