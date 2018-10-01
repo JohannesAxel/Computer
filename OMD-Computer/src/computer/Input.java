@@ -1,8 +1,6 @@
 package computer;
 
-public abstract interface Input {
-	
-	abstract boolean adress();
+public interface Input {
 	
 	public Word get(Memory memory);
 	

@@ -5,8 +5,8 @@ import java.util.List;
 
 public abstract class Program {
 	
-	List<Instruction> instructions; 
-	ProgramCounter progCounter;
+	private List<Instruction> instructions; 
+	private ProgramCounter progCounter;
 	
 	public Program() {
 		progCounter = new ProgramCounter();

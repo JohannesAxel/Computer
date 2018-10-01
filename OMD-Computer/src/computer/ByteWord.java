@@ -1,7 +1,7 @@
 package computer;
 
 public class ByteWord implements Word<ByteWord> {
-
+	
 	byte byteWord;
 
 	public ByteWord(byte byteWord) {
@@ -21,16 +21,19 @@ public class ByteWord implements Word<ByteWord> {
 		return null;
 	}
 
-	@Override
 	public Word get(Memory memory) {
 		return this;
 	}
 
-	@Override
-	public ByteWord set(ByteWord byteWord) {
+	public void set(ByteWord byteWord) {
 		this.byteWord = byteWord.getValue();
-		return null;
 	}
 
+	public boolean equals(ByteWord byteWord) {
+		return false;
+	}
+	public String toString(){
+		return String.valueOf(byteWord);
+	}
 	
 }
