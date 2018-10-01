@@ -13,6 +13,7 @@ public class Memory {
 	}
 	
 	protected Word get(int index) {
+
 		return memory[index];
 	}
 	

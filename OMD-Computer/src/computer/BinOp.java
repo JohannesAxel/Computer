@@ -4,11 +4,11 @@ public abstract class BinOp implements Instruction{
 	
 	protected Input left;
 	protected Input right;
-	protected Adress adress;
+	protected Address address;
 	
-	public BinOp(Input left, Input right, Adress adress) {
+	public BinOp(Input left, Input right, Address address) {
 		this.left = left;
 		this.right = right;
-		this.adress = adress;
+		this.address = address;
 	}	
 }

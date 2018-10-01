@@ -4,4 +4,6 @@ public interface Input {
 	
 	public Word get(Memory memory);
 	
+	public String toString();
+	
 }

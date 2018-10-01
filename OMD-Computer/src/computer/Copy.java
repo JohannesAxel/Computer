@@ -3,14 +3,19 @@ package computer;
 public class Copy implements Instruction{
 
 	Input input;
-	Adress adress;
+	Address address;
+	String toString;
 	
-	public Copy(Input input, Adress adress){
+	public Copy(Input input, Address address){
 		this.input = input;
-		this.adress = adress;
+		this.address = address;
+		toString = "Copy " + input + " to " + address;
 	}
 	
 	public void execute(Memory memory, ProgramCounter progCounter) {
-		adress.get(memory).set(input.get(memory));	
+		address.get(memory).set(input.get(memory));
+	}
+	public String toString(){
+		return toString;
 	}
 }

@@ -2,12 +2,18 @@ package computer;
 
 public class Jump implements Instruction{
 	private int index;
+	private String toString;
 	
 	public Jump(int index){
 		this.index = index;
+		toString = "Jump to " + index;
 	}
 
 	public void execute(Memory memory, ProgramCounter progCounter) {
 		progCounter.jump(index);
 	}
+	public String toString(){
+		return toString;
+	}
+	
 }

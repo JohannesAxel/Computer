@@ -7,14 +7,18 @@ public abstract class Program {
 	
 	private List<Instruction> instructions; 
 	private ProgramCounter progCounter;
+	int size;
 	
 	public Program() {
 		progCounter = new ProgramCounter();
 		instructions = new ArrayList<Instruction>();
+		size = 0;
 	}
 
 	protected void add(Instruction instruction) {
 		instructions.add(instruction);
+		System.out.println(size + ": " + instruction.toString());
+		size++;
 	}
 
 	public void execute(Memory memory) {
@@ -22,5 +26,8 @@ public abstract class Program {
 			instructions.get(progCounter.get()).execute(memory, progCounter);
 			progCounter.next();
 		}
+	}
+	public String toString(){
+		return "";
 	}
 }

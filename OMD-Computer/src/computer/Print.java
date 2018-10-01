@@ -10,5 +10,7 @@ public class Print implements Instruction{
 	public void execute(Memory memory, ProgramCounter progCounter) {
 		System.out.println(input.get(memory).toString());
 	}
-
+	public String toString(){
+		return "Print " + input;
+	}
 }

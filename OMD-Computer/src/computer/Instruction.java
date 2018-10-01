@@ -8,5 +8,7 @@ public interface Instruction {
 	 *  @param progCounter  reference to the program counter so that instructions can change the counter
 	 */
 	public void execute(Memory memory, ProgramCounter progCounter);
+	
+	public String toString();
 		
 }
