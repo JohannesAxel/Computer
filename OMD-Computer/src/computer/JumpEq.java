@@ -8,7 +8,7 @@ public class JumpEq implements Instruction {
 	private String toString;
 
 	public JumpEq(int index, Input left, Input right) {
-		this.index = index;
+		this.index = index - 1;
 		this.left = left;
 		this.right = right;
 		toString = "Jump to " + index + " if " + left + " == " + right;

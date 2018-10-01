@@ -21,9 +21,7 @@ public class Main {
 	        System.out.println(message);
 	        System.out.println(program);
 	        Computer computer = new Computer(new Memory(1024, wf));
-	        System.out.println("Laddar Program");
 	        computer.load(program);
-	        System.out.println("Kör");
 	        computer.run();
 	        
 	    }

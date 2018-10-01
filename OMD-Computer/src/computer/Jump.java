@@ -5,7 +5,7 @@ public class Jump implements Instruction{
 	private String toString;
 	
 	public Jump(int index){
-		this.index = index;
+		this.index = index - 1;
 		toString = "Jump to " + index;
 	}
 

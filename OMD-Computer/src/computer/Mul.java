@@ -8,7 +8,7 @@ public class Mul extends BinOp{
 		toString = "Multiply " + left + " and " + right + " into " + address;
 	}
 	public void execute(Memory memory, ProgramCounter progCounter) {
-		address.get(memory).set(left.get(memory).mul(right.get(memory)));
+		address.get(memory).set( left.get(memory).mul( right.get(memory) ));
 	}
 	public String toString(){
 		return toString;
