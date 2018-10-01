@@ -8,16 +8,18 @@ public abstract class Program {
 	private List<Instruction> instructions; 
 	private ProgramCounter progCounter;
 	int size;
+	StringBuilder sb;
 	
 	public Program() {
 		progCounter = new ProgramCounter();
 		instructions = new ArrayList<Instruction>();
 		size = 0;
+		sb = new StringBuilder();
 	}
 
 	protected void add(Instruction instruction) {
 		instructions.add(instruction);
-		System.out.println(size + ": " + instruction.toString());
+		sb.append(size + ": " + instruction.toString() + "\n");
 		size++;
 	}
 
@@ -28,6 +30,6 @@ public abstract class Program {
 		}
 	}
 	public String toString(){
-		return "";
+		return sb.toString();
 	}
 }
