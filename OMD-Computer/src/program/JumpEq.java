@@ -1,4 +1,7 @@
-package computer;
+package program;
+
+import computer.Memory;
+import inputs.Input;
 
 public class JumpEq implements Instruction {
 

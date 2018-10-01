@@ -1,4 +1,6 @@
-package computer;
+package program;
+
+import computer.Memory;
 
 public interface Instruction {
 

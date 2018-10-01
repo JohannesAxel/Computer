@@ -1,4 +1,8 @@
-package computer;
+package program;
+
+import computer.Memory;
+import inputs.Address;
+import inputs.Input;
 
 public class Mul extends BinOp{
 

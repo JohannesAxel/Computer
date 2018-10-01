@@ -1,17 +1,19 @@
 package computer;
 
+import program.Program;
+
 public class Computer {
 	
 	private Memory memory;
-	private Program curProgram;	
+	private Program program;	
 	public Computer (Memory memory) {
 		this.memory = memory;
 	}
 	public void load(Program program) {
-		curProgram = program;
+		this.program = program;
 	}
 	
 	public void run() {
-		curProgram.execute(memory);
+		program.execute(memory);
 	}
 }

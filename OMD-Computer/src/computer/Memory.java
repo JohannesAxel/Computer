@@ -1,5 +1,7 @@
 package computer;
 
+import inputs.Word;
+
 public class Memory {
 	private WordFactory wf;
 	private Word[] memory;
@@ -12,7 +14,7 @@ public class Memory {
 		}
 	}
 	
-	protected Word get(int index) {
+	public Word get(int index) {
 
 		return memory[index];
 	}

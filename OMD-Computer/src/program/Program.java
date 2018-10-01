@@ -1,7 +1,9 @@
-package computer;
+package program;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import computer.Memory;
 
 public abstract class Program {
 	

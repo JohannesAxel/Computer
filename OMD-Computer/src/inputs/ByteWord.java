@@ -1,8 +1,10 @@
-package computer;
+package inputs;
+
+import computer.Memory;
 
 public class ByteWord implements Word<ByteWord> {
 
-	Byte byteWord;
+	private Byte byteWord;
 
 	public ByteWord(Byte byteWord) {
 		this.byteWord = byteWord;

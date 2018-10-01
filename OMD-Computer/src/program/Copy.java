@@ -1,10 +1,14 @@
-package computer;
+package program;
+
+import computer.Memory;
+import inputs.Address;
+import inputs.Input;
 
 public class Copy implements Instruction{
 
-	Input input;
-	Address address;
-	String toString;
+	private Input input;
+	private Address address;
+	private String toString;
 	
 	public Copy(Input input, Address address){
 		this.input = input;

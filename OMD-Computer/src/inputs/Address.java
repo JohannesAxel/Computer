@@ -1,8 +1,10 @@
-package computer;
+package inputs;
+
+import computer.Memory;
 
 public class Address implements Input {
 	private int index;
-	String toString;
+	private String toString;
 	public Address(int index) {
 		this.index = index;
 		toString = "[" + index + "]";

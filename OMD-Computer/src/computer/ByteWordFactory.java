@@ -1,5 +1,7 @@
 package computer;
 
+import inputs.ByteWord;
+
 public class ByteWordFactory implements WordFactory<ByteWord>{
 		
 	public ByteWord word(String word) {

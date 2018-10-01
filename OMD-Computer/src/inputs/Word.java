@@ -1,4 +1,4 @@
-package computer;
+package inputs;
 
 public interface Word<T extends Word<T>> extends Input{
 	

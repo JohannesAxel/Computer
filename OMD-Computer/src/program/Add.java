@@ -1,8 +1,12 @@
-package computer;
+package program;
+
+import computer.Memory;
+import inputs.Address;
+import inputs.Input;
 
 public class Add extends BinOp {
 
-		String toString;
+		private String toString;
 
 	public Add(Input left, Input right, Address address) {
 		super(left, right, address);

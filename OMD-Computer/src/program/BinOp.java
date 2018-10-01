@@ -1,4 +1,7 @@
-package computer;
+package program;
+
+import inputs.Address;
+import inputs.Input;
 
 public abstract class BinOp implements Instruction{
 	
@@ -11,4 +14,6 @@ public abstract class BinOp implements Instruction{
 		this.right = right;
 		this.address = address;
 	}	
+	
+		
 }

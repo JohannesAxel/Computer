@@ -1,4 +1,4 @@
-package computer;
+package program;
 
 public class ProgramCounter {
 	private int index;

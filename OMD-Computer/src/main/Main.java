@@ -1,4 +1,19 @@
-package computer;
+package main;
+
+import computer.ByteWordFactory;
+import computer.Computer;
+import computer.LongWordFactory;
+import computer.Memory;
+import computer.WordFactory;
+import inputs.Address;
+import program.Add;
+import program.Copy;
+import program.Halt;
+import program.Jump;
+import program.JumpEq;
+import program.Mul;
+import program.Print;
+import program.Program;
 
 public class Main {
 

@@ -1,4 +1,6 @@
-package computer;
+package inputs;
+
+import computer.Memory;
 
 public class LongWord implements Word<LongWord>{
 	
