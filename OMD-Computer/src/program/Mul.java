@@ -3,6 +3,7 @@ package program;
 import computer.Memory;
 import inputs.Address;
 import inputs.Input;
+import inputs.Word;
 
 public class Mul extends BinOp{
 
@@ -11,9 +12,10 @@ public class Mul extends BinOp{
 		super(left, right, address);
 		toString = "Multiply " + left + " and " + right + " into " + address;
 	}
-	public void execute(Memory memory, ProgramCounter progCounter) {
-		address.get(memory).set( left.get(memory).mul( right.get(memory) ));
+	protected Word op(Memory memory) {
+		return left.get(memory).mul(right.get(memory));
 	}
+	
 	public String toString(){
 		return toString;
 	}

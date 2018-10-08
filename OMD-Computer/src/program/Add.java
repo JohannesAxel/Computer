@@ -3,6 +3,7 @@ package program;
 import computer.Memory;
 import inputs.Address;
 import inputs.Input;
+import inputs.Word;
 
 public class Add extends BinOp {
 
@@ -13,10 +14,13 @@ public class Add extends BinOp {
 		toString = "Add " + left + " and " + right + " into " + address;
 	}
 		
-	public void execute(Memory memory, ProgramCounter progCounter) {
-		address.get(memory).set(left.get(memory).add(right.get(memory)));
+	protected Word op(Memory memory) {
+		return left.get(memory).add(right.get(memory));
+		
 	}
 	public String toString(){
 		return toString;
 	}
+
+
 }
