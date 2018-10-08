@@ -14,7 +14,7 @@ public class Memory {
 		}
 	}
 	
-	public Word get(int index) {
+	public Word getWord(int index) {
 
 		return memory[index];
 	}

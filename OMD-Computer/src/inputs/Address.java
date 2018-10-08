@@ -11,7 +11,7 @@ public class Address implements Input {
 	}
 
 	public Word getWord(Memory memory) {
-		return memory.get(index);
+		return memory.getWord(index);
 	}
 	
 	public String toString(){
