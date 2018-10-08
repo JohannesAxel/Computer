@@ -10,7 +10,7 @@ public class Address implements Input {
 		toString = "[" + index + "]";
 	}
 
-	public Word get(Memory memory) {
+	public Word getWord(Memory memory) {
 		return memory.get(index);
 	}
 	

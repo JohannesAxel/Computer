@@ -12,7 +12,7 @@ public class Print implements Instruction{
 		toString = "Print " + input;
 	}
 	public void execute(Memory memory, ProgramCounter progCounter) {
-		System.out.println(input.get(memory).toString());
+		System.out.println(input.getWord(memory).toString());
 	}
 	public String toString(){
 		return toString;

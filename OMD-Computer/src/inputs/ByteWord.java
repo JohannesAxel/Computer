@@ -23,7 +23,7 @@ public class ByteWord implements Word<ByteWord> {
 		return new ByteWord((byte) (byteWord.getValue() * this.byteWord));
 	}
 
-	public Word<ByteWord> get(Memory memory) {
+	public Word<ByteWord> getWord(Memory memory) {
 		return this;
 	}
 

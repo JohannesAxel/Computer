@@ -23,7 +23,7 @@ public class LongWord implements Word<LongWord>{
 		return new LongWord((long) (longWord.getValue() * this.longWord));
 	}
 
-	public Word<LongWord> get(Memory memory) {
+	public Word<LongWord> getWord(Memory memory) {
 		return this;
 	}
 

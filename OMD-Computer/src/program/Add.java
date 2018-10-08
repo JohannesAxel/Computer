@@ -15,7 +15,7 @@ public class Add extends BinOp {
 	}
 		
 	protected Word op(Memory memory) {
-		return left.get(memory).add(right.get(memory));
+		return left.getWord(memory).add(right.getWord(memory));
 		
 	}
 	public String toString(){

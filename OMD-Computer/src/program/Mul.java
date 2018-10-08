@@ -13,7 +13,7 @@ public class Mul extends BinOp{
 		toString = "Multiply " + left + " and " + right + " into " + address;
 	}
 	protected Word op(Memory memory) {
-		return left.get(memory).mul(right.get(memory));
+		return left.getWord(memory).mul(right.getWord(memory));
 	}
 	
 	public String toString(){

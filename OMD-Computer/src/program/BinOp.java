@@ -19,7 +19,8 @@ public abstract class BinOp implements Instruction {
 
 	abstract protected Word op(Memory memory);
 
+	// The changing in the memory always happen here now
 	public void execute(Memory memory, ProgramCounter progCounter) {
-		address.get(memory).set(op(memory));
+		address.getWord(memory).set(op(memory));
 	}
 }

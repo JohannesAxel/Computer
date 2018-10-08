@@ -4,7 +4,7 @@ import computer.Memory;
 
 public interface Input {
 	
-	public Word get(Memory memory);
+	public Word getWord(Memory memory);
 	
 	public String toString();
 	
