@@ -9,7 +9,7 @@ public abstract class BinOp implements Instruction {
 
 	private Input left;
 	private Input right;
-	protected Address address;
+	private Address address;
 
 	public BinOp(Input left, Input right, Address address) {
 		this.left = left;
@@ -21,11 +21,15 @@ public abstract class BinOp implements Instruction {
 
 	public void execute(Memory memory, ProgramCounter progCounter) {
 		Word memoryWord = address.getWord(memory);
-		if (!memoryWord.equals(left.getWord(memory))) {
+		Word input = left.getWord(memory);
+		
+		if (!memoryWord.equals(input)) {
 			op(memoryWord, left.getWord(memory));
 		}
+		
+		input = right.getWord(memory);
 		if (!memoryWord.equals(right.getWord(memory))) {
-			op(memoryWord, right.getWord(memory));
+			op(memoryWord, input);
 		}
 	}
 }

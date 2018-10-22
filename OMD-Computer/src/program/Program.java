@@ -6,12 +6,12 @@ import java.util.List;
 import computer.Memory;
 
 public abstract class Program {
-	
-	private List<Instruction> instructions; 
+
+	private List<Instruction> instructions;
 	private ProgramCounter progCounter;
 	int size;
 	StringBuilder sb;
-	
+
 	public Program() {
 		progCounter = new ProgramCounter();
 		instructions = new ArrayList<Instruction>();
@@ -31,7 +31,8 @@ public abstract class Program {
 			progCounter.next();
 		}
 	}
-	public String toString(){
+
+	public String toString() {
 		return sb.toString();
 	}
 }
