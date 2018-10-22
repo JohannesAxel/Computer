@@ -2,8 +2,8 @@ package inputs;
 
 import computer.Memory;
 
-public class LongWord implements Word<LongWord>{
-	
+public class LongWord implements Word<Long> {
+
 	Long longWord;
 
 	public LongWord(Long longWord) {
@@ -12,31 +12,30 @@ public class LongWord implements Word<LongWord>{
 
 	public Long getValue() {
 		return longWord;
-
 	}
 
-	public LongWord add(LongWord longWord) {
-		return new LongWord((long) (longWord.getValue() + this.longWord));
+	public void add(Long longWord) {
+		this.longWord = longWord + this.longWord;
 	}
 
-	public LongWord mul(LongWord longWord) {
-		return new LongWord((long) (longWord.getValue() * this.longWord));
+	public void mul(Long longWord) {
+		this.longWord = longWord * this.longWord;
 	}
 
-	public Word<LongWord> getWord(Memory memory) {
+	public Word<Long> getWord(Memory memory) {
 		return this;
 	}
 
-	public void set(LongWord longWord) {
-		this.longWord = longWord.getValue();
+	public void set(Long longWord) {
+		this.longWord = longWord;
 	}
 
-	public int compareTo(LongWord longWord) {
-		return this.longWord.compareTo(longWord.getValue());
+	public int compareTo(Long longWord) {
+		return this.longWord.compareTo(longWord);
 	}
 
 	public String toString() {
 		return longWord.toString();
 	}
-	
+
 }

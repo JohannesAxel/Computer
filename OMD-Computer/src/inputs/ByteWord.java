@@ -2,7 +2,7 @@ package inputs;
 
 import computer.Memory;
 
-public class ByteWord implements Word<ByteWord> {
+public class ByteWord implements Word<Byte> {
 
 	private Byte byteWord;
 
@@ -15,24 +15,20 @@ public class ByteWord implements Word<ByteWord> {
 
 	}
 
-	public ByteWord add(ByteWord byteWord) {
-		return new ByteWord((byte) (byteWord.getValue() + this.byteWord));
+	public void add(Byte byteWord) {
+		this.byteWord = (byte) (byteWord + this.byteWord);
 	}
 
-	public ByteWord mul(ByteWord byteWord) {
-		return new ByteWord((byte) (byteWord.getValue() * this.byteWord));
+	public void mul(Byte byteWord) {
+		this.byteWord = (byte) (byteWord * this.byteWord);
 	}
 
-	public Word<ByteWord> getWord(Memory memory) {
+	public Word<Byte> getWord(Memory memory) {
 		return this;
 	}
 
-	public void set(ByteWord byteWord) {
-		this.byteWord = byteWord.getValue();
-	}
-
-	public int compareTo(ByteWord byteWord) {
-		return this.byteWord.compareTo(byteWord.getValue());
+	public void set(Byte byteWord) {
+		this.byteWord = byteWord;
 	}
 
 	public String toString() {

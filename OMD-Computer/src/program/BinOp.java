@@ -7,8 +7,8 @@ import inputs.Word;
 
 public abstract class BinOp implements Instruction {
 
-	protected Input left;
-	protected Input right;
+	private Input left;
+	private Input right;
 	protected Address address;
 
 	public BinOp(Input left, Input right, Address address) {
@@ -17,10 +17,15 @@ public abstract class BinOp implements Instruction {
 		this.address = address;
 	}
 
-	abstract protected Word op(Memory memory);
+	abstract protected void op(Word memoryWord, Word input);
 
-	// The changing in the memory always happen here now
 	public void execute(Memory memory, ProgramCounter progCounter) {
-		address.getWord(memory).set(op(memory));
+		Word memoryWord = address.getWord(memory);
+		if (!memoryWord.equals(left.getWord(memory))) {
+			op(memoryWord, left.getWord(memory));
+		}
+		if (!memoryWord.equals(right.getWord(memory))) {
+			op(memoryWord, right.getWord(memory));
+		}
 	}
 }

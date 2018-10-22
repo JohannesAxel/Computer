@@ -15,7 +15,6 @@ public class Memory {
 	}
 	
 	public Word getWord(int index) {
-
 		return memory[index];
 	}
 	

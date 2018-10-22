@@ -5,18 +5,20 @@ import inputs.Address;
 import inputs.Input;
 import inputs.Word;
 
-public class Mul extends BinOp{
+public class Mul extends BinOp {
 
-	String toString;
+	private String toString;
+
 	public Mul(Input left, Input right, Address address) {
 		super(left, right, address);
 		toString = "Multiply " + left + " and " + right + " into " + address;
 	}
-	protected Word op(Memory memory) {
-		return left.getWord(memory).mul(right.getWord(memory));
+
+	protected void op(Word memoryWord, Word input) {
+		memoryWord.mul(input.getValue());
 	}
-	
-	public String toString(){
+
+	public String toString() {
 		return toString;
 	}
 }

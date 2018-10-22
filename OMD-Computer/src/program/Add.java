@@ -7,20 +7,19 @@ import inputs.Word;
 
 public class Add extends BinOp {
 
-		private String toString;
+	private String toString;
 
 	public Add(Input left, Input right, Address address) {
 		super(left, right, address);
-		toString = "Add " + left + " and " + right + " into " + address;
-	}
-		
-	protected Word op(Memory memory) {
-		return left.getWord(memory).add(right.getWord(memory));
-		
-	}
-	public String toString(){
-		return toString;
+		toString = "add " + left + " and " + right + " into " + address;
 	}
 
+	protected void op(Word memoryWord, Word input) {
+		memoryWord.add(input.getValue());
+	}
+
+	public String toString() {
+		return toString;
+	}
 
 }
