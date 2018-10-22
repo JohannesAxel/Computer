@@ -30,10 +30,6 @@ public class LongWord implements Word<Long> {
 		this.longWord = longWord;
 	}
 
-	public int compareTo(Long longWord) {
-		return this.longWord.compareTo(longWord);
-	}
-
 	public String toString() {
 		return longWord.toString();
 	}
