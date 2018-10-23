@@ -20,16 +20,34 @@ public abstract class BinOp implements Instruction {
 	abstract protected void op(Word memoryWord, Word input);
 
 	public void execute(Memory memory, ProgramCounter progCounter) {
-		Word memoryWord = address.getWord(memory);
-		Word input = left.getWord(memory);
-		
-		if (!memoryWord.equals(input)) {
-			op(memoryWord, left.getWord(memory));
+
+		Word addressWord = address.getWord(memory);
+		Word inputLeft = left.getWord(memory);
+		Word inputRight = right.getWord(memory);
+
+		// If address is none of the inputs
+		if (!addressWord.equals(inputLeft) && !addressWord.equals(inputRight)) {
+			addressWord.set(0);
+			op(addressWord, inputLeft);
+			op(addressWord, inputRight);
+			
+		} else {
+			// If inputs and address is same object
+			if (inputLeft.equals(inputRight) && addressWord.equals(inputLeft)) {
+				op(addressWord, inputLeft);
+				
+			} else {
+				// If addresss is different form inputLeft
+				if (!addressWord.equals(inputLeft)) {
+					op(addressWord, inputLeft);
+				}
+				// If addresss is different form inputRight
+				if (!addressWord.equals(inputRight)) {
+					op(addressWord, inputRight);
+				}
+
+			}
 		}
-		
-		input = right.getWord(memory);
-		if (!memoryWord.equals(right.getWord(memory))) {
-			op(memoryWord, input);
-		}
+
 	}
 }

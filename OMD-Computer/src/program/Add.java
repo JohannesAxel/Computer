@@ -1,6 +1,5 @@
 package program;
 
-import computer.Memory;
 import inputs.Address;
 import inputs.Input;
 import inputs.Word;
@@ -14,8 +13,8 @@ public class Add extends BinOp {
 		toString = "add " + left + " and " + right + " into " + address;
 	}
 
-	protected void op(Word memoryWord, Word input) {
-		memoryWord.add(input.getValue());
+	protected void op(Word addressWord, Word input) {
+		addressWord.add(input.getValue());
 	}
 
 	public String toString() {
