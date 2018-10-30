@@ -2,9 +2,9 @@ package inputs;
 
 public interface Word<T extends Comparable> extends Input {
 
-	public void add(T word);
+	public void add(T word, T otherWord);
 
-	public void mul(T word);
+	public void mul(T word, T otherWord);
 
 	public void set(T word);
 

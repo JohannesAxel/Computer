@@ -14,8 +14,8 @@ public class Mul extends BinOp {
 		toString = "Multiply " + left + " and " + right + " into " + address;
 	}
 
-	protected void op(Word memoryWord, Word input) {
-		memoryWord.mul(input.getValue());
+	protected void op(Word left, Word right, Word result) {
+		result.mul(left.getValue(), right.getValue()); 
 	}
 
 	public String toString() {

@@ -15,12 +15,12 @@ public class ByteWord implements Word<Byte> {
 
 	}
 
-	public void add(Byte byteWord) {
-		this.byteWord = (byte) (byteWord + this.byteWord);
+	public void add(Byte leftWord, Byte rightWord) {
+		byteWord = (byte) (rightWord + leftWord);
 	}
 
-	public void mul(Byte byteWord) {
-		this.byteWord = (byte) (byteWord * this.byteWord);
+	public void mul(Byte leftWord, Byte rightWord) {
+		byteWord = (byte) (leftWord*rightWord);
 	}
 
 	public Word<Byte> getWord(Memory memory) {

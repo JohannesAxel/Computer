@@ -14,12 +14,12 @@ public class LongWord implements Word<Long> {
 		return longWord;
 	}
 
-	public void add(Long longWord) {
-		this.longWord = longWord + this.longWord;
+	public void add(Long leftWord, Long rightWord) {
+		longWord = leftWord + rightWord;
 	}
 
-	public void mul(Long longWord) {
-		this.longWord = longWord * this.longWord;
+	public void mul(Long leftWord, Long rightWord) {
+		longWord = leftWord * rightWord;
 	}
 
 	public Word<Long> getWord(Memory memory) {
@@ -33,5 +33,6 @@ public class LongWord implements Word<Long> {
 	public String toString() {
 		return longWord.toString();
 	}
+
 
 }

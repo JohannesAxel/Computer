@@ -13,8 +13,8 @@ public class Add extends BinOp {
 		toString = "add " + left + " and " + right + " into " + address;
 	}
 
-	protected void op(Word addressWord, Word input) {
-		addressWord.add(input.getValue());
+	protected void op(Word left, Word right, Word result ) {
+		result.add(left.getValue(), right.getValue());
 	}
 
 	public String toString() {
