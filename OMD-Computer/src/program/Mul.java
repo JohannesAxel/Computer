@@ -15,7 +15,7 @@ public class Mul extends BinOp {
 	}
 
 	protected void op(Word left, Word right, Word result) {
-		result.mul(left.getValue(), right.getValue()); 
+		result.mul(left, right); 
 	}
 
 	public String toString() {

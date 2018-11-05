@@ -14,7 +14,7 @@ public class Add extends BinOp {
 	}
 
 	protected void op(Word left, Word right, Word result ) {
-		result.add(left.getValue(), right.getValue());
+		result.add(left, right);
 	}
 
 	public String toString() {

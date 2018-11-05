@@ -19,7 +19,7 @@ public class JumpEq implements Instruction {
 
 	public void execute(Memory memory, ProgramCounter progCounter) {
 		
-		if (left.getWord(memory).getValue().compareTo(right.getWord(memory).getValue()) == 0) {
+		if (left.getWord(memory).equals(right.getWord(memory))) {
 			progCounter.jump(index);
 		}
 	}

@@ -1,15 +1,15 @@
 package inputs;
 
-public interface Word<T extends Comparable> extends Input {
+public interface Word extends Input {
 
-	public void add(T word, T otherWord);
+	public void add(Word left, Word right);
 
-	public void mul(T word, T otherWord);
+	public void mul(Word left, Word right);
 
-	public void set(T word);
-
-	public T getValue();
-
+	public void set(Word word);
+	
+	public boolean equals(Word word);
+	
 	public String toString();
 
 }

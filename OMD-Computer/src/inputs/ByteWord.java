@@ -2,36 +2,47 @@ package inputs;
 
 import computer.Memory;
 
-public class ByteWord implements Word<Byte> {
+public class ByteWord implements Word {
 
-	private Byte byteWord;
+	private byte byteWord;
 
-	public ByteWord(Byte byteWord) {
+	public ByteWord(byte byteWord) {
 		this.byteWord = byteWord;
 	}
 
-	public Byte getValue() {
+	public byte getValue() {
 		return byteWord;
 
 	}
 
-	public void add(Byte leftWord, Byte rightWord) {
-		byteWord = (byte) (rightWord + leftWord);
+	public void add(Word left,Word right) {
+		ByteWord leftByte = (ByteWord)left;
+		ByteWord rightByte = (ByteWord)right;
+		byteWord = (byte) (leftByte.getValue() + rightByte.getValue());
+	}
+	
+	public void mul(Word left, Word right) {
+		ByteWord leftByte = (ByteWord)left;
+		ByteWord rightByte = (ByteWord)right;
+		byteWord = (byte) (leftByte.getValue()*rightByte.getValue());
 	}
 
-	public void mul(Byte leftWord, Byte rightWord) {
-		byteWord = (byte) (leftWord*rightWord);
-	}
-
-	public Word<Byte> getWord(Memory memory) {
+	public Word getWord(Memory memory) {
 		return this;
 	}
 
-	public void set(Byte byteWord) {
-		this.byteWord = byteWord;
+	public void set(Word word) {
+		ByteWord byteWord = (ByteWord) word;
+		this.byteWord = byteWord.getValue();
 	}
 
 	public String toString() {
-		return byteWord.toString();
+		return Byte.toString(byteWord);
+	}
+
+	@Override
+	public boolean equals(Word word) {
+		ByteWord byteWord = (ByteWord) word;
+		return this.byteWord == byteWord.getValue();
 	}
 }

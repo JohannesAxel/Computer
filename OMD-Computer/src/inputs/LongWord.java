@@ -2,11 +2,11 @@ package inputs;
 
 import computer.Memory;
 
-public class LongWord implements Word<Long> {
+public class LongWord implements Word {
 
-	Long longWord;
+	long longWord;
 
-	public LongWord(Long longWord) {
+	public LongWord(long longWord) {
 		this.longWord = longWord;
 	}
 
@@ -14,25 +14,33 @@ public class LongWord implements Word<Long> {
 		return longWord;
 	}
 
-	public void add(Long leftWord, Long rightWord) {
-		longWord = leftWord + rightWord;
+	public void add(Word left,Word right) {
+		LongWord leftLong = (LongWord)left;
+		LongWord rightLong = (LongWord)right;
+		longWord = leftLong.getValue() + rightLong.getValue();
+	}
+	
+	public void mul(Word left, Word right) {
+		LongWord leftByte = (LongWord)left;
+		LongWord rightByte = (LongWord)right;
+		longWord = leftByte.getValue()*rightByte.getValue();
 	}
 
-	public void mul(Long leftWord, Long rightWord) {
-		longWord = leftWord * rightWord;
-	}
-
-	public Word<Long> getWord(Memory memory) {
+	public Word getWord(Memory memory) {
 		return this;
 	}
 
-	public void set(Long longWord) {
-		this.longWord = longWord;
+	public void set(Word word) {
+		LongWord byteWord = (LongWord) word;
+		this.longWord = byteWord.getValue();
 	}
 
 	public String toString() {
-		return longWord.toString();
+		return Long.toString(longWord);
 	}
-
-
+	
+	public boolean equals(Word word) {
+		LongWord longWord = (LongWord) word;
+		return this.longWord == longWord.getValue();
+	}
 }

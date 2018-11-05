@@ -17,7 +17,7 @@ public class Copy implements Instruction {
 	}
 
 	public void execute(Memory memory, ProgramCounter progCounter) {
-		address.getWord(memory).set(input.getWord(memory).getValue());
+		address.getWord(memory).set(input.getWord(memory));
 	}
 
 	public String toString() {
